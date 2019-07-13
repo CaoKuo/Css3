@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .wrapper {
+            margin-top: 300px;
+            margin-left: 300px;
+            width: 200px;
+            height: 200px;
+            transform-style: preserve-3d;
+            transform: rotateX(45deg);
+            position: relative;
+            border: 1px solid #000;
+            animation: rotated 8s linear infinite ;
+        }
+        .wrapper div {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 200px;
+            height: 200px;
+            /* opacity: 0.9; */
+            color: #fff;
+            font-size: 30px;
+            text-align: center;
+            line-height: 200px;
+            /* perspective-origin: top; */
+
+        }
+
+        
+        .demo1 {
+            /* background-color: aquamarine; */
+            background-image: url("./img/1.jpg");
+            background-size: 100% 100%;
+            transform: rotateY(0deg) translateZ(200px);
+        }
+        .demo2 {
+            background-image: url("./img/2.jpg");
+            background-size: 100% 100%;
+            transform: rotateY(60deg) translateZ(200px);
+        }
+        .demo3 {
+            background-image: url("./img/3.jpg");
+            background-size: 100% 100%;
+            transform: rotateY(120deg) translateZ(200px);
+        }
+        .demo4 {
+            background-image: url("./img/4.jpg");
+            background-size: 100% 100%;
+            transform: rotateY(180deg) translateZ(200px);
+        }
+        .demo5 {
+            background-image: url("./img/5.jpg");
+            background-size: 100% 100%;
+            transform: rotateY(240deg) translateZ(200px);
+        }
+        .demo6 {
+            background-image: url("./img/6.jpg");
+            background-size: 100% 100%;
+            transform: rotateY(300deg) translateZ(200px);
+        }
+        @keyframes rotated {
+            0%{
+                transform: perspective(600px)  rotateY(0deg);
+            }
+            100% {
+                transform:  perspective(600px) rotateY(360deg);
+            }
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="demo1"></div>
+        <div class="demo2"></div>
+        <div class="demo3"></div>
+        <div class="demo4"></div>
+        <div class="demo5"></div>
+        <div class="demo6"> </div>
+    </div>
+</body>
+</html>
